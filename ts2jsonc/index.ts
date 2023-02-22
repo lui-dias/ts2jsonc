@@ -184,7 +184,7 @@ class BaseComponent<T extends DefaultParams> {
 		const path = this.file.replace(/\\/g, '/').split('/').slice(1, -1).slice(-3).join('__')
 		const id = this.params.id ? `__${this.params.id}` : ''
 
-		const gen_id = (n: number) => `${this.NAME}#${path}${id}__${this.ACRONYM}-${n}`
+		const gen_id = (n: number) => `${this.NAME}#${path}${id}-${n}`
 
 		let n = 1
 
@@ -192,7 +192,7 @@ class BaseComponent<T extends DefaultParams> {
 			n++
 		}
 
-		this.id = `${this.NAME}#${path}${id}__${this.ACRONYM}-${n}`
+		this.id = `${this.NAME}#${path}${id}-${n}`
 		output.add(this.id)
 
 		return this.id

@@ -6,7 +6,6 @@ type Params = DefaultParams & {
 
 class _Text extends BaseComponent<Params> {
 	NAME = 'rich-text'
-	ACRONYM = 'TXT'
 	HAVE_CHILDREN = false
 	STYLE_FILENAME = 'rich-text'
 }

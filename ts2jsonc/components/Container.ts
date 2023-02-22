@@ -6,7 +6,6 @@ type Params = DefaultParams & {
 
 class _Container extends BaseComponent<Params> {
 	NAME = 'container'
-	ACRONYM = 'CTN'
 	STYLE_FILENAME = 'container'
 }
 

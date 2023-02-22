@@ -12,7 +12,6 @@ type Params = DefaultParams & {
 
 class _Image extends BaseComponent<Params> {
 	NAME = 'image'
-	ACRONYM = 'IMG'
 	STYLE_FILENAME = 'store-components'
 	HAVE_CHILDREN = false
 }

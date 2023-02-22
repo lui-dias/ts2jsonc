@@ -19,7 +19,6 @@ type Params = DefaultParams & {
 
 class _Breadcrumb extends BaseComponent<Params> {
 	NAME = 'breadcrumb'
-	ACRONYM = 'BRC'
 	STYLE_FILENAME = 'breadcrumb'
 	HAVE_CHILDREN = false
 }

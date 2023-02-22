@@ -6,7 +6,7 @@ import { Builder } from './index.ts'
  */
 function formatTime(time: number) {
 	const unit = time < 1000 ? 'ms' : 's'
-	return `${(time / (unit === 'ms' ? 1 : 1000)).toFixed(unit === 'ms' ? 0 : 2)}`
+	return `${(time / (unit === 'ms' ? 1 : 1000)).toFixed(unit === 'ms' ? 0 : 2)}${unit}`
 }
 
 const start = performance.now()

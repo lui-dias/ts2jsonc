@@ -181,7 +181,7 @@ class BaseComponent<T extends DefaultParams> {
 		if (this.id) {
 			return this.id
 		}
-		const path = this.file.replace(/\\/g, '/').split('/').slice(1, -1).slice(-3).join('__')
+		const path = this.file.replace(/\\/g, '/').split('/').slice(1, -1).slice(-2).join('__')
 		const id = this.params.id ? `__${this.params.id}` : ''
 
 		const gen_id = (n: number) => `${this.NAME}#${path}${id}-${n}`

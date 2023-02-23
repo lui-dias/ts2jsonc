@@ -13,6 +13,7 @@ export type DefaultParams = {
 	id?: string
 	style?: Record<string, CSSBuilder>
 	vendor?: string
+	preffix?: string
 }
 
 export type TBaseComponent = BaseComponent<DefaultParams>
@@ -181,10 +182,10 @@ class BaseComponent<T extends DefaultParams> {
 		if (this.id) {
 			return this.id
 		}
-		const path = this.file.replace(/\\/g, '/').split('/').slice(1, -1).slice(-2).join('__')
+
 		const id = this.params.id ? `__${this.params.id}` : ''
 
-		const gen_id = (n: number) => `${this.NAME}#${path}${id}-${n}`
+		const gen_id = (n: number) => `${this.NAME}#${this.params.preffix}${id}-${n}`
 
 		let n = 1
 
@@ -192,7 +193,7 @@ class BaseComponent<T extends DefaultParams> {
 			n++
 		}
 
-		this.id = `${this.NAME}#${path}${id}-${n}`
+		this.id = gen_id(n)
 		output.add(this.id)
 
 		return this.id
